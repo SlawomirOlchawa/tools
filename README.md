@@ -1,0 +1,1 @@
+Simple helpers used for common projects.
