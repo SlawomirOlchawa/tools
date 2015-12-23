@@ -135,6 +135,8 @@ class Helper_CacheStatic
      */
     protected static function _production()
     {
+        if (!class_exists('Kohana')) return true;
+
         return (Kohana::$environment === Kohana::PRODUCTION);
     }
 

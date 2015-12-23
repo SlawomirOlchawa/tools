@@ -103,7 +103,7 @@ class Helper_Includer
      */
     public static function mergeCSS()
     {
-        if ((Kohana::$environment !== Kohana::PRODUCTION) OR
+        if ((class_exists('Kohana') AND Kohana::$environment !== Kohana::PRODUCTION) OR
             (!file_exists('cache'.DIRECTORY_SEPARATOR.'css')))
         {
             return static::renderCSS();
